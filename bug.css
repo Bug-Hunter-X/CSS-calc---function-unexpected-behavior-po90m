@@ -1,0 +1,9 @@
+The following CSS rule is causing unexpected behavior:
+
+```css
+div {
+  width: calc(50% - 10px);
+}
+```
+
+The `calc()` function is used to calculate the width dynamically, but it might lead to unexpected results if the parent element doesn't have a defined width. If the parent's width is not explicitly set, it could result in the child element having a width that is less than expected.
