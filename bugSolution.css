@@ -1,0 +1,16 @@
+To fix this issue, ensure that the parent element has a defined width. You can either set a fixed width (e.g., `width: 500px;`) or use percentage-based width if you want the div to always occupy a certain percentage of the parent's width. This provides a clear reference for the `calc()` function to calculate from.
+
+Here's how you can correct the CSS:
+
+```css
+div {
+  width: calc(50% - 10px);
+}
+
+/*Add this*/
+div.parent {
+  width: 80%; /*Or a fixed width, e.g., width: 500px;*/
+}
+
+```
+In this example, we added a class to the parent of the div that contains width property, this makes sure that the calc function operates on a well defined width, making sure the result is as expected.
